@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>empleados</title>
+  </head>
+  <body>
+    <header></header>
+
+    <main>
+    <section id="section-empleados">
+      <div class="lista-empleados-container">
+        <header>
+          <h3>EMPLEADOS</h3>
+          <hr>
+          <form>
+          <label>Buscar:</label>
+          <input type="text" id="barra-busqueda-empleado"/>
+        </form>
+        </header>
+        <div id="empleados-lista"></div>
+      </div>
+    </section>
+
+    <article>
+
+    <section id="section-datos">
+      <div class="datos-empleado-container">
+        <header>
+          <img src="/src/assets/icons/tarjeta_din_azul.png">
+          <h3>DATOS DEL EMPLEADO</h3>
+        </header>
+        <hr>
+        <div class="datos-empleado">
+            <p id="dni-emp">DNI: -</p>
+            <p id="nombre-emp">Nombre(s): - -</p>
+            <p id="apellido-emp">Apellido(s): -</p>
+            <p id="fecha-nac">Fecha Nacimiento: -</p>
+            <p id="fecha-ing">Fecha Ingreso: -</p>
+            <p id="num-cuenta">Cuenta N°: -</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-operaciones">
+        <div class="operaciones-container">
+            <header>
+              <img src="/src/assets/icons/engrane_azul.png">
+              <h3>OPERACIONES RAPIDAS</h3>
+            </header>
+            <hr>
+        <div class="botones-container">
+            <button  class="btn-remuneracion">agregar remuneracion</button>
+            <button class="btn-retencion">agregar retencion</button>
+            <button class="btn-descuento">agrear descuento</button>
+            <button>crear contrato</button>
+            <button>ver contratos</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="section-contrato">
+        <div class="contrato-container">
+          <header>
+            <img src="/src/assets/icons/contrato_azul.png">
+            <h3>CONTRATO ACTUAL</h3>
+          </header>
+          <hr>
+          <div class="contrato-data-container">
+              <div class="contrato-basico">
+                <h4 id="numero-contrato">CONTRATO N°: -</h4>
+                <h4 id="fecha-contrato">FECHA DEL CONTRATO: -</h4>
+                <h4 id="modalidad-contrato">MODALIDAD:-</h4>
+              </div>
+              
+              <h5 class="leyenda-contrato">MONTOS PACTADOS</h5>
+              <hr>
+              <table class="tabla-montos">
+                <thead>
+                  <td>CONCEPTO</td>
+                  <td>MONTO</td>
+                </thead>
+                <tbody class="cuerpo-tabla tabla-borrar"></tbody>
+              </table>
+
+              <h5 class="leyenda-contrato">ACUERDO BLANCO</h5>
+              <hr>
+              <table class="tabla-blanco">
+                <thead>
+                  <td>CONCEPTO</td>
+                  <td>UNI.</td>
+                  <td>CANTIDAD</td>
+                </thead>
+                <tbody class="cuerpo-tabla">
+                  <tr>
+                    <td id="tabla-banco-concept">- -</td>
+                    <td id="tabla-banco-uni">//////</td>
+                    <td id="tabla-banco-mont">0</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <h5 class="leyenda-contrato">ADICIONALES</h5>
+              <hr>
+              <table class="tabla-adicionales">
+                <thead>
+                  <td>CODIGO</td>
+                  <td>CONCEPTO</td>
+                  <td>UNI.</td>
+                  <td>CANTIDAD</td>
+                  <tbody id="cuerpo-tabla-adicional" class="cuerpo-tabla tabla-borrar"></tbody>
+                </thead>
+              </table>
+
+        </div>
+      </div>
+    </section>
+
+  </article>
+
+  </main>
+    <script type="module" src="/src/TS/container/index.ts"></script>
+    <script type="module" src="/src/TS/container/empleado.ts"></script>
+  </body>
+</html>
