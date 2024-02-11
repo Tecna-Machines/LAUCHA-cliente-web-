@@ -1,6 +1,7 @@
 import '../../css/empleados.css'
 import { obtenerContratoEmpleado } from '../API/ObtenerContrato';
 import { obtenerTodosLosEmpleados } from '../API/ObtenerEmpleado';
+import { saveEmpleado } from '../Services/EmpleadoService';
 import { AcuerdoBlancoDTO, AdicionalDTO } from '../Types/Contrato.tipos';
 import { EmpleadoDTO } from '../Types/Empleados.tipos';
 import formatoFecha from '../utils/formatoFecha';
@@ -8,12 +9,12 @@ import { formatearComoMoneda } from '../utils/formatoMoneda';
 import { pintaFiltrandoEmpleados,pintarItemsEmpleados } from '../utils/pintarListaEmpleados';
 import $ from 'jquery';
 
-
 //#region = pintar lista de empleados 
-
 const contenedorListaEmpleados: HTMLElement | null = document.getElementById('empleados-lista');
 const barraBusqueda: HTMLElement | null = document.getElementById('barra-busqueda-empleado');
 let todosLosempleados : EmpleadoDTO[];
+
+prepararCreacionContrato()
 
 if (contenedorListaEmpleados != null && barraBusqueda !=null) {
     
@@ -47,6 +48,9 @@ botonesSeleccionar.on('click',async (e)=>{
         fechaIngreDato.text(`Fecha Ingreso: ${formatoFecha(new Date(empleadoSeleccionado.fechaIngreso))}`)
         cuentaDato.text(`Cuenta N°: ${empleadoSeleccionado.numeroCuenta}`)
         
+        //guardo el empleado en memoria para operar sobr el despues
+        saveEmpleado(empleadoSeleccionado)
+
         limpiarDatosDelContrato()
         pintarLosDatosContrato(dniEmp)
     }
@@ -83,7 +87,6 @@ async function pintarLosDatosContrato(dni:string){
     let listaAdicionales = contrato.adicionales
 
     let cuerpoTablaAdicional: HTMLElement | null = document.getElementById('cuerpo-tabla-adicional')
-    console.log(cuerpoTablaAdicional)
 
     if(cuerpoTablaAdicional != null){
 
@@ -167,3 +170,13 @@ function limpiarDatosDelContrato() {
     });
 }
 
+
+function prepararCreacionContrato(){
+
+    const btnCrearContrato = $('#btn-crear-contrato')
+
+    btnCrearContrato.on('click',(event)=>{
+        event.preventDefault()
+        location.href = 'contrato-nuevo.html'
+    })
+}

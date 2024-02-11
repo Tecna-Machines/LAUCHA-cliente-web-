@@ -5,7 +5,7 @@ export type AdicionalDTO = {
     esPorcentual:boolean
 }
 
-type ModalidadDTO = {
+export type ModalidadDTO = {
     codigo:string
     descripcion:string
 }
@@ -27,4 +27,14 @@ export type ContratoDTO = {
     acuerdoBlanco:AcuerdoBlancoDTO
     modalidad:ModalidadDTO
     adicionales: AdicionalDTO[]
+}
+
+export type CrearContratoDTO = {
+    dni:string
+    montoHora:number
+    montoFijo:number
+    modalidad:string
+    tipo:string
+    adicionales:string[]
+    acuerdoBlanco:AcuerdoBlancoDTO
 }
