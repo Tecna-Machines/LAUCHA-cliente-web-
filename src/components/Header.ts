@@ -1,16 +1,16 @@
 import '../css/header.css';
 
-import rutaImgLaucha from '../assets/icons/laucha.png';
+const rutaImgLaucha = new URL('/assets/icons/laucha.png',import.meta.url).href
 
-import rutaImgInicio from '../assets/icons/dashboard.png';
-import rutaImgEmpleados from '../assets/icons/tarjeta_dni.png';
-import rutaImgLiquidacion from '../assets/icons/dinero.png';
-import rutaImgOtros from '../assets/icons/otros.png';
+const rutaImgInicio = new URL('/assets/icons/dashboard.png', import.meta.url).href;
+const rutaImgEmpleados  = new URL('/assets/icons/tarjeta_dni.png',import.meta.url).href;
+const rutaImgLiquidacion  = new URL('/assets/icons/dinero.png',import.meta.url).href;
+const rutaImgOtros = new URL('/assets/icons/otros.png',import.meta.url).href;
 
-const rutaEmpleado =  '../pages/empleados.html';
-const rutaInicio = '../pages/dashboard.html'
-const rutaLiquidacion = '../pages/dashboard.html'
-const rutaOtros = '../pages/dashboard.html'
+const rutaEmpleado =  new URL('../pages/empleados.html',import.meta.url).href;
+const rutaInicio = new URL('../pages/dashboard.html',import.meta.url).href;
+const rutaLiquidacion = new URL('../pages/contrato-nuevo.html',import.meta.url).href;
+const rutaOtros = new URL('../pages/dashboard.html',import.meta.url).href;
 
 
 export default function ComponenteHeader(){

@@ -15,47 +15,51 @@ const barraBusqueda: HTMLElement | null = document.getElementById('barra-busqued
 let todosLosempleados : EmpleadoDTO[];
 
 prepararCreacionContrato()
+prepararEmpleados()
 
-if (contenedorListaEmpleados != null && barraBusqueda !=null) {
+async function prepararEmpleados()
+{
+    if (contenedorListaEmpleados != null && barraBusqueda !=null) {
     
-    const empleadosPeticion = await obtenerTodosLosEmpleados()
-     todosLosempleados = empleadosPeticion.data
-    
-    pintarItemsEmpleados(todosLosempleados,contenedorListaEmpleados) 
-    pintaFiltrandoEmpleados(todosLosempleados,contenedorListaEmpleados,barraBusqueda)
-
-} 
-
-let botonesSeleccionar = $('.btn-empleado')
-
-botonesSeleccionar.on('click',async (e)=>{
-    const dniEmp = $(e.currentTarget).attr('value');
-
-    let empleadoSeleccionado = todosLosempleados.filter(empleado => empleado.dni == dniEmp)[0]
-
-    let dniDato = $('#dni-emp')
-    let nombreDato = $('#nombre-emp')
-    let apellidoDato = $('#apellido-emp')
-    let fechaNacDato = $('#fecha-nac')
-    let fechaIngreDato = $('#fecha-ing')
-    let cuentaDato = $('#num-cuenta')
-
-    if(dniEmp !=null){
-        dniDato.text(`DNI: ${empleadoSeleccionado.dni}`)
-        nombreDato.text(`Nombres(s): ${empleadoSeleccionado.nombre}`)
-        apellidoDato.text(`Apellido(s): ${empleadoSeleccionado.apellido}`)
-        fechaNacDato.text(`Fecha Nacimiento: ${formatoFecha(new Date(empleadoSeleccionado.fechaNacimiento))}`)
-        fechaIngreDato.text(`Fecha Ingreso: ${formatoFecha(new Date(empleadoSeleccionado.fechaIngreso))}`)
-        cuentaDato.text(`Cuenta N°: ${empleadoSeleccionado.numeroCuenta}`)
+        const empleadosPeticion = await obtenerTodosLosEmpleados()
+         todosLosempleados = empleadosPeticion.data
         
-        //guardo el empleado en memoria para operar sobr el despues
-        saveEmpleado(empleadoSeleccionado)
-
-        limpiarDatosDelContrato()
-        pintarLosDatosContrato(dniEmp)
-    }
+        pintarItemsEmpleados(todosLosempleados,contenedorListaEmpleados) 
+        pintaFiltrandoEmpleados(todosLosempleados,contenedorListaEmpleados,barraBusqueda)
     
-})
+    } 
+    
+    let botonesSeleccionar = $('.btn-empleado')
+    
+    botonesSeleccionar.on('click',async (e)=>{
+        const dniEmp = $(e.currentTarget).attr('value');
+    
+        let empleadoSeleccionado = todosLosempleados.filter(empleado => empleado.dni == dniEmp)[0]
+    
+        let dniDato = $('#dni-emp')
+        let nombreDato = $('#nombre-emp')
+        let apellidoDato = $('#apellido-emp')
+        let fechaNacDato = $('#fecha-nac')
+        let fechaIngreDato = $('#fecha-ing')
+        let cuentaDato = $('#num-cuenta')
+    
+        if(dniEmp !=null){
+            dniDato.text(`DNI: ${empleadoSeleccionado.dni}`)
+            nombreDato.text(`Nombres(s): ${empleadoSeleccionado.nombre}`)
+            apellidoDato.text(`Apellido(s): ${empleadoSeleccionado.apellido}`)
+            fechaNacDato.text(`Fecha Nacimiento: ${formatoFecha(new Date(empleadoSeleccionado.fechaNacimiento))}`)
+            fechaIngreDato.text(`Fecha Ingreso: ${formatoFecha(new Date(empleadoSeleccionado.fechaIngreso))}`)
+            cuentaDato.text(`Cuenta N°: ${empleadoSeleccionado.numeroCuenta}`)
+            
+            //guardo el empleado en memoria para operar sobr el despues
+            saveEmpleado(empleadoSeleccionado)
+    
+            limpiarDatosDelContrato()
+            pintarLosDatosContrato(dniEmp)
+        }
+        
+    })
+}
 
 async function pintarLosDatosContrato(dni:string){
 
