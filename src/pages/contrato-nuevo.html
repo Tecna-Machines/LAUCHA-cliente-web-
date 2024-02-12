@@ -1,56 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>crear contrato</title>
-</head>
-<body>
+  </head>
+  <body>
     <header></header>
 
     <main>
+      <form>
+        <section id="aspectos-basicos">
+          <header>
+            <h3>ASPECTOS BASICOS</h3>
+            <hr />
+          </header>
+          <div class="opciones-contrato">
+            <label>monto por hora: ($)</label>
+            <input type="number" />
 
-        <form>
-            
-            <section>
-                <header>
-                    <h3>ASPECTOS BASICOS</h3>
-                    <hr>
-                </header>
-                <label>monto por hora:</label>
-            <input type="number">
-
-            <label>monto fijo:</label>
-            <input type="number">
+            <label>monto fijo: ($)</label>
+            <input type="number" />
 
             <label>tipo de contrato:</label>
             <select>
-                <option value="">permanente</option>
-                <option value="">temporal</option>
-                <option value="">pasantia</option>
+              <option value="">permanente</option>
+              <option value="">temporal</option>
+              <option value="">pasantia</option>
             </select>
 
             <label>modalidad del contrato:</label>
             <select>
-                <option value="">mensual fijo + horas extras</option>
-                <option value="">mensual fijo</option>
-                <option value="">quincena por hora</option>
-                <option value="">quincenal fijo</option>
+              <option value="">mensual fijo + horas extras</option>
+              <option value="">mensual fijo</option>
+              <option value="">quincena por hora</option>
+              <option value="">quincenal fijo</option>
             </select>
-            </section>
+          </div>
+        </section>
 
-            <section>
-                <header>
-                    <h4>ACUERDO EN BLANCO</h4>
-                    <hr>
-                </header>
-            </section>
+        <section id="acuerdo-blanco">
+          <header>
+            <h3>ACUERDO EN BLANCO</h3>
+            <hr />
+          </header>
+          <div class="acuerdo-config-container">
+            <div class="select-tipo">
+              <input type="radio" name="tipo-blanco" />
+              <label for="">MONTO FIJO</label>
+              <input type="radio" name="tipo-blanco" />
+              <label for="">MONTO PORCENTUAL</label>
+            </div>
 
-        </form>
+            <div class="configuracion-acuerdo">
+              <div class="contenedor-barra">
+                <h4>MONTO EN BANCO (bruto): $10000</h4>
+                <img src="/assets/icons/banco_azul.png" alt="banco" />
+              <input type="range" min="0" max="100" id="barra-blanco" />
+              <img src="/assets/icons/dinero_verde.png" alt="efectivo" />
+              <h4>MONTO EN EFECTIVO (bruto): $5000</h4>
+              </div>
+            </div>
+          </div>
+        </section>
 
+        <section id="adicionales">
+          <header>
+            <h3>AGREGAR ADICIONALES</h3>
+            <hr />
+          </header>
+          <div class="container-acepta-adicional">
+            <input type="radio" name="adicional">
+            <label for="adicional">agregar adicionales</label>
+            <input type="radio" name="adicional" checked>
+            <label for="adicional" >NO agregar adicionales</label>
+          </div>
+          <div class="adicionales-contenedor">
+            <select name="adicional" class="select-adicionales"></select>
+            <button>agregar otro adicional</button>
+          </div>
+        </section>
+      </form>
     </main>
 
     <script type="module" src="../TS/container/index.ts"></script>
-    <script type="module" src="../TS/container/contrato-nuevo.ts"></script>
-</body>
+    <script type="module" src="../TS/container/contrato-nuevo.js"></script>
+  </body>
 </html>

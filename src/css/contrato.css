@@ -1,0 +1,111 @@
+form{
+    padding: 1%;
+}
+
+#aspectos-basicos ,
+#acuerdo-blanco,
+#adicionales{
+    width: 80%;
+    padding: 1%;
+    margin: auto;
+    border: 2px solid black;
+}
+
+.opciones-contrato{
+    text-align: center;
+}
+
+.opciones-contrato > input,
+.opciones-contrato > select  {
+    background-color: white;
+    color: var(--azul-marino);
+    padding: 0.3%;
+    margin: 1%;
+}
+
+/* acuerdo en blanco*/
+
+#acuerdo-blanco{
+    margin-top: 1rem;
+}
+
+.select-tipo,
+.container-acepta-adicional{
+    border: 2px solid var(--azul-marino);
+    width: 25%;
+    padding: 1%;
+    margin: 1%;
+}
+
+.select-tipo > input {margin-left: 13px;}
+
+.configuracion-acuerdo{
+    display:  inline-flex;
+    text-align: center;
+}
+
+.contenedor-barra> img{
+    border: 3px solid var(--azul-marino);
+    border-radius: 20px;
+    padding: 1.2%;
+}
+
+.contenedor-barra {
+    display: flex;
+    align-items: center; /* Alinea verticalmente en el centro */
+  }
+  
+  .contenedor-barra > img {
+    margin: 0 10px; /* Espacio entre las imágenes y la barra */
+    width: 50px; /* Ajusta el tamaño según sea necesario */
+    height: auto; /* Ajusta la altura automáticamente */
+  }
+
+#barra-blanco {
+    /* Dimensiones de la barra */
+    width: 60rem;
+    height: 20px; 
+    
+    /* Estilo del cursor */
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 5px;
+  }
+  
+  /* Estilo del cursor */
+  #barra-blanco::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Eliminar estilos predeterminados de WebKit */
+
+    width: 20px; /* Ancho del cursor */
+    height: 30px; /* Alto del cursor */
+    background-color: white; /* Color del cursor */
+    cursor: pointer; /* Cambiar a puntero */
+    border: 1px solid black;
+  }
+  
+  /* adicionales*/
+
+  #adicionales{
+    margin-top: 1rem;
+  }
+
+  .select-adicionales,
+  .adicionales-contenedor> button{
+    color: var(--azul-marino);
+    background-color: white;
+    padding: 0.5%;
+    transition: 0.3s all;
+    border-radius: 3px;
+    cursor: pointer
+  }
+
+  .select-adicionales> option{
+    flex-grow: 1;
+    text-align: justify;
+
+  }
+
+  .adicionales-contenedor>button:hover{
+    background-color: var(--azul-marino);
+    color: white;
+  }
