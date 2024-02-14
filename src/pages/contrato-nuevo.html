@@ -10,6 +10,17 @@
 
     <main>
       <form>
+        <section id="creacion-contrato">
+          <header>
+            <h3>Formulario de creacion para nuevo contrato</h3>
+            <hr>
+          </header>
+          <div class="datos-empleado" style="margin-top: 5px;">
+            <p id="nombre">EMPLEADO: JONH DOE</p>
+            <p id="dni">DNI: 37654109</p>
+          </div>
+        </section>
+
         <section id="aspectos-basicos">
           <header>
             <h3>ASPECTOS BASICOS</h3>
@@ -17,24 +28,20 @@
           </header>
           <div class="opciones-contrato">
             <label>monto por hora: ($)</label>
-            <input type="number" />
+            <input type="number" id="monto-hora"/>
 
             <label>monto fijo: ($)</label>
-            <input type="number" />
+            <input type="number"  id="monto-fijo"/>
 
             <label>tipo de contrato:</label>
-            <select>
-              <option value="">permanente</option>
-              <option value="">temporal</option>
-              <option value="">pasantia</option>
+            <select id="select-tipo-contrato">
+              <option value="permanente">permanente</option>
+              <option value="temporal">temporal</option>
+              <option value="pasantia">pasantia</option>
             </select>
 
             <label>modalidad del contrato:</label>
-            <select>
-              <option value="">mensual fijo + horas extras</option>
-              <option value="">mensual fijo</option>
-              <option value="">quincena por hora</option>
-              <option value="">quincenal fijo</option>
+            <select id="select-modalidad">
             </select>
           </div>
         </section>
@@ -46,7 +53,7 @@
           </header>
           <div class="acuerdo-config-container">
             <div class="select-tipo">
-              <input type="radio" name="tipo-blanco" />
+              <input type="radio" name="tipo-blanco"  id="tipo-blanco" checked/>
               <label for="">MONTO FIJO</label>
               <input type="radio" name="tipo-blanco" />
               <label for="">MONTO PORCENTUAL</label>
@@ -54,11 +61,11 @@
 
             <div class="configuracion-acuerdo">
               <div class="contenedor-barra">
-                <h4>MONTO EN BANCO (bruto): $10000</h4>
+                <h4 id="monto-banco">MONTO EN BANCO (bruto): ---</h4>
                 <img src="/assets/icons/banco_azul.png" alt="banco" />
               <input type="range" min="0" max="100" id="barra-blanco" />
               <img src="/assets/icons/dinero_verde.png" alt="efectivo" />
-              <h4>MONTO EN EFECTIVO (bruto): $5000</h4>
+              <h4 id="monto-efectivo">MONTO EN EFECTIVO (bruto): ---</h4>
               </div>
             </div>
           </div>
@@ -70,15 +77,23 @@
             <hr />
           </header>
           <div class="container-acepta-adicional">
-            <input type="radio" name="adicional">
+            <input type="radio" name="adicional" id="check-adicional">
             <label for="adicional">agregar adicionales</label>
             <input type="radio" name="adicional" checked>
             <label for="adicional" >NO agregar adicionales</label>
           </div>
+          <button class="btn-agregar-adicional">agregar otro adicional</button>
           <div class="adicionales-contenedor">
             <select name="adicional" class="select-adicionales"></select>
-            <button>agregar otro adicional</button>
           </div>
+        </section>
+
+        <section id="confirmacion-contrato">
+            <header>
+              <h3>CONFIRMACION</h3>
+              <hr>
+            </header>
+            <button id="btn-crear-contrato">CREAR CONTRATO</button>
         </section>
       </form>
     </main>
