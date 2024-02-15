@@ -28,10 +28,11 @@ async function prepararEmpleados()
         pintaFiltrandoEmpleados(todosLosempleados,contenedorListaEmpleados,barraBusqueda)
     
     } 
+
+    //delego el evento al contenedor de la lista en lugar del boton
     
-    let botonesSeleccionar = $('.btn-empleado')
-    
-    botonesSeleccionar.on('click',async (e)=>{
+    $('#empleados-lista').on('click', '.btn-empleado', async (e) => {
+
         const dniEmp = $(e.currentTarget).attr('value');
     
         let empleadoSeleccionado = todosLosempleados.filter(empleado => empleado.dni == dniEmp)[0]
@@ -57,8 +58,8 @@ async function prepararEmpleados()
             limpiarDatosDelContrato()
             pintarLosDatosContrato(dniEmp)
         }
-        
     })
+    
 }
 
 async function pintarLosDatosContrato(dni:string){
