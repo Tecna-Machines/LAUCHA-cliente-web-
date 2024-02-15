@@ -13,8 +13,8 @@ form{
     border: 2px solid black;
 }
 
-.opciones-contrato{
-    text-align: center;
+.opciones-contrato>input{
+   width: 10%;
 }
 
 .opciones-contrato > input,
@@ -36,7 +36,7 @@ form{
 .select-tipo,
 .container-acepta-adicional{
     border: 2px solid var(--azul-marino);
-    width: 25%;
+    width: 30%;
     padding: 1%;
     margin: 1%;
 }
