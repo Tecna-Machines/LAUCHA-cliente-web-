@@ -8,9 +8,9 @@
 
 .boton-navegacion > a{
     text-decoration: none;
-    padding: 2%;
     color: white;
-    width: 20rem;
+    width: 17rem;
+    margin-top: 0.3rem;
     display: flex;
     align-items: center;
     transition: all 0.2s;
