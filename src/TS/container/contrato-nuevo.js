@@ -1,5 +1,5 @@
 import '../../css/contrato.css'
-import {crearContratoEmpleado, ObtenerAdicionalesExistentes, ObtenerModalidadesExistentes} from '../../TS/API/CrearContrato.ts'
+import {CrearContratoEmpleado, ObtenerAdicionalesExistentes, ObtenerModalidadesExistentes} from '../../TS/API/CrearContrato.ts'
 import {getEmpleado} from '../Services/EmpleadoService.ts'
 import mostrarAlerta from '../utils/crearAlerta.js';
 import crearModal from '../utils/crearModal.js';
@@ -247,7 +247,7 @@ function crearContrato()
 
 async function confirmarcionContrato(crearContratoDTO)
 {
-    let respuesta = await crearContratoEmpleado(crearContratoDTO)
+    let respuesta = await CrearContratoEmpleado(crearContratoDTO)
 
     let responseCode = respuesta.response.status
 
