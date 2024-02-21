@@ -1,7 +1,7 @@
 import { API_URL } from "../../config"
 import { AdicionalDTO, ContratoDTO, CrearContratoDTO, ModalidadDTO } from "../Types/Contrato.tipos"
 
-export const crearContratoEmpleado = async (contrato:CrearContratoDTO) => 
+export const CrearContratoEmpleado = async (contrato:CrearContratoDTO) => 
 {
     const enpoint = `${API_URL}/Contrato`
     const requestOptions = {method: `POST`,headers: {"Content-Type": "application/json"}}

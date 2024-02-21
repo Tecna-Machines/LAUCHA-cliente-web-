@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/crearEmpleado.css">
+    <title>crear empleado</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <section id="container-acta-emp">
+            <form action="">
+                <header>
+                    <h2>Formulario de acta empleado</h2>
+                    <hr>
+                </header>
+                <div class="container-datos">
+                    <label for="">DNI: </label>
+                    <input type="text" id="dni-emp">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre-emp">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido-emp">
+                    <label for="fecha-nac">Fecha de Nacimiento: </label>
+                    <input type="date" id="fecha-nac">
+                    <label for="fecha-ing">Fecha de ingreso: </label>
+                    <input type="date" id="fecha-ing">
+                </div>
+            </form>
+            <button id="btn-crear">CREAR EMPLEADO</button>
+        </section>
+
+        <section id="container-cuenta">
+                <header>
+                    <h2>Configurar retenciones fijas</h2>
+                    <hr>
+                </header>
+                
+                <div class="container-cuenta-data">
+                    <h5 id="num-cuenta">Cuenta N°: ----</h5>
+                    <h5 id="dni-cuenta">DNI: ---</h5>
+                    <h5 id="empleado-cuenta"> Empleado: ----</h5>
+                </div>
+
+                <div class="container-retenciones-fijas">
+                    <label><input type="checkbox" id="cbox1" value="first_checkbox" checked/>(0900) Jubilacion 11%</label>
+                    <label><input type="checkbox" id="cbox1" value="first_checkbox" checked/>(0900) Jubilacion 11%</label>
+                    <label><input type="checkbox" id="cbox1" value="first_checkbox" />(0900) Jubilacion 11%</label>
+                    <label><input type="checkbox" id="cbox1" value="first_checkbox" />(0900) Jubilacion 11%</label>
+                    <label><input type="checkbox" id="cbox1" value="first_checkbox" />(0900) Jubilacion 11%</label>
+                </div>
+            <button id="btn-cuenta-config">CONFIRMA RETENCIONES</button>
+        </section>
+
+    </main>
+</body>
+<script type="module" src="../TS/container/index.ts"></script>
+<script type="module" src="../TS/container/crear-empleado.js"></script>
+</html>

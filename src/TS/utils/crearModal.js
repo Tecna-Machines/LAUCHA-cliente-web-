@@ -1,5 +1,6 @@
 export default function crearModal(titulo, mensaje) {
     return new Promise((resolve) => {
+
       // Crear elementos del modal
       const modalBackdrop = document.createElement('div');
       modalBackdrop.classList.add('modal-backdrop');

@@ -1,0 +1,56 @@
+main{
+    width: 90%;
+    margin: auto;
+    padding: 2%;
+}
+
+#container-acta-emp,
+#container-cuenta{
+    border: 2px solid var(--azul-marino);
+    padding: 2%;
+    color: var(--azul-marino);
+    margin: 1%;
+}
+
+#btn-crear,
+#btn-cuenta-config{
+    background-color: var(--azul-marino);
+    border-radius: 3px;
+    padding: 0.3%;
+    transition: 0.3s all;
+    cursor: pointer;
+    width: 50%;
+    margin-top: 10px;
+}
+
+.container-datos{
+    margin: auto;
+    padding: 1%;
+}
+
+.container-datos > input{
+    color: var(--azul-marino);
+    background-color: white;
+    padding: 0.3em;
+    border-radius: 5px;
+    margin: 0.2%;
+    width: 11%;
+}
+
+.container-datos > input[type="date"]{
+    background-color: var(--azul-marino);
+    color: white;
+}
+
+/* configuracion de cuenta */
+.container-cuenta-data>h5{
+    display: inline-flex;
+    margin: 0.5rem;
+}
+.container-retenciones-fijas> label{
+    display: block;
+}
+
+.container-retenciones-fijas>label>input{
+    width: 3%;
+}
