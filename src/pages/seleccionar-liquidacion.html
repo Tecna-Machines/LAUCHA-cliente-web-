@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/seleccionar-liquidacion.css">
+    <title>liquidacion</title>
+</head>
+<body>
+    <header></header>
+
+    <main>
+        <section id="">
+            <header>
+                <h2>selecciona el periodo a liquidar</h2>
+                <hr>
+            </header>
+
+            <div class="calendar">
+                <h4>DESDE:</h4>
+                <input type="date" id="inicio-periodo">
+                <h4>HASTA:</h4>
+                <input type="date" id="fin-periodo">
+            </div>
+
+        </section>
+
+        <section>
+            <header>
+                <h2>selecciona lo que quieres liquidar</h2>
+                <hr>
+            </header>
+          <div class="liq-container">
+            <div class="liq personal">
+                <img src="../../public/assets/icons/empleados_azul.png" alt="" srcset="">
+                <button id="btn-persona">LIQUIDAR UNA PERSONA</button>
+            </div>
+
+            <div class="liq personal">
+                <img src="../../public/assets/icons/factory_azul.png" alt="" srcset="">
+                <button>LIQUIDAR LA PLANTA</button>
+            </div>
+          </div>
+        </section>
+    </main>
+
+    <script type="module" src="../TS/container/index.ts"></script>
+    <script type="module" src="../TS/container/seleccionar-liquidacion.js"></script>
+</body>
+</html>

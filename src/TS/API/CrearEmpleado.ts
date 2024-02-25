@@ -32,3 +32,20 @@ export const CrearEmpleadoNuevo = async (empleado:CrearEmpleadoDTO) =>
         data
     }
 }
+
+export const CrearRetencionesFijasCuenta = async (numeroCuenta:string,codigosRetenciones:string[]) =>
+{
+    const enpoint = `${API_URL}/Cuenta/${numeroCuenta}/retenciones-fijas`
+    const requestOptions = {method: `POST`,headers: {"Content-Type": "application/json"}}
+
+    const requestBody = {body: JSON.stringify(codigosRetenciones)}
+    const message = {...requestOptions, ...requestBody}
+
+    const response = await fetch(enpoint,message);
+    const data : any = await response.json();
+
+    return {
+        response,
+        data
+    }
+}

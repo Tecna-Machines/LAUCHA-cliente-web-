@@ -9,7 +9,7 @@ const rutaImgOtros = new URL('/assets/icons/otros.png',import.meta.url).href;
 
 const rutaEmpleado =  new URL('../pages/empleados.html',import.meta.url).href;
 const rutaInicio = new URL('../pages/dashboard.html',import.meta.url).href;
-const rutaLiquidacion = new URL('../pages/contrato-nuevo.html',import.meta.url).href;
+const rutaLiquidacion = new URL('../pages/seleccionar-liquidacion.html',import.meta.url).href;
 const rutaOtros = new URL('../pages/dashboard.html',import.meta.url).href;
 
 

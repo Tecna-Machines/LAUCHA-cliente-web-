@@ -1,0 +1,77 @@
+section
+{
+    width: 80%;
+    margin: auto;
+    margin-top: 2em;
+    border: 2px solid var(--azul-marino);
+    padding: 1%;
+}
+
+#seccion-periodo
+{
+    margin-top: 5rem;
+}
+
+.calendar {
+    padding: 1%;
+    display: grid;
+    align-items: center; /* Alinea verticalmente los elementos */
+    font-size: 15pt;
+    margin-top: 1em;
+    width: 70%;
+    margin: auto;
+}
+
+.calendar h4 {
+    margin: 0; /* Elimina el margen por defecto de los encabezados */
+}
+
+
+input[type="date"]
+{
+    font-size: 15pt;
+    background-color: var(--azul-marino);
+    padding: 0.5%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.liq-container
+{
+    display: flex;
+}
+
+.liq
+{
+    border: 3px solid var(--azul-marino);
+    border-radius: 5px;
+    padding: 0.3%;
+    margin: 1rem;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+}
+
+.liq > img
+{
+    display: block;
+    margin:auto;
+    width: 20%;
+    padding: 1%;
+}
+
+.liq > button
+{
+    padding: 1%;
+    border-radius: 5px;
+    background-color: var(--azul-marino);
+    margin: 2%;
+    cursor: pointer;
+    transition: 0.3s all;
+}
+
+.liq > button:hover
+{
+    background-color: white;
+    color: var(--azul-marino);
+}
